@@ -33,7 +33,7 @@ const VerificationPage = () => {
 
   useEffect(() => {
     onClick();
-  }, [token]);
+  }, [token, onClick]);
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="w-full grid place-content-center items-center rounded-xl justify-center max-w-2xl p-4  shadow-md  mx-auto">

@@ -23,10 +23,11 @@ const InvitationPage = () => {
       setSuccess("Invitation verified");
       router.push(`/auth/register?token=${token}`);
     }
-  }, [token]);
+  }, [token, router]);
+
   useEffect(() => {
     inviteCheck();
-  }, [token]);
+  }, [token, router, inviteCheck]);
   return (
     <div className="mx-auto max-w-5xl">
       <h1 className="text-3xl font-bold text-center">

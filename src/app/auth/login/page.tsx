@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -20,19 +19,19 @@ import { Loader2 } from "lucide-react";
 import FormError from "@/components/form-error";
 import FormSuccess from "@/components/form-success";
 
-export const loginSchema = z.object({
-  email: z.string().email({
-    message: "Email is requred",
-  }),
-  password: z.string().min(5, {
-    message: "password must be at least 5 characters.",
-  }),
-});
-
 const Login = () => {
+  const loginSchema = z.object({
+    email: z.string().email({
+      message: "Email is requred",
+    }),
+    password: z.string().min(5, {
+      message: "password must be at least 5 characters.",
+    }),
+  });
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [loading, setLoading] = useState(false);
+
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -68,6 +67,7 @@ const Login = () => {
                     <FormControl>
                       <Input
                         type="email"
+                        id="email"
                         placeholder="enter your email"
                         {...field}
                       />
@@ -86,6 +86,7 @@ const Login = () => {
                     <FormControl>
                       <Input
                         type="password"
+                        id="password"
                         placeholder="enter your password"
                         {...field}
                       />

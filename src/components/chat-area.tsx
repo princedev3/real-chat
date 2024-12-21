@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useChatStore } from "@/store/chat-store";
 import { useSessionStore } from "@/store/session-provider";
-import { useCreateMessage } from "@/hooks/create-message-hook";
+import { useCreateMessage } from "@/hooks/use-create-message-hook";
 import { Message } from "@prisma/client";
 import { pusherClient } from "@/lib/pusher";
 import toast from "react-hot-toast";
