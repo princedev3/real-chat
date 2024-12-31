@@ -26,6 +26,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (user?.customExpiration) {
         token.expiration = user.customExpiration;
       }
+
       return token;
     },
     async session({ session, token }) {

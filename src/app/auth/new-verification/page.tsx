@@ -35,7 +35,7 @@ const VerificationPage = () => {
     onClick();
   }, [token, onClick]);
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center ">
       <div className="w-full grid place-content-center items-center rounded-xl justify-center max-w-2xl p-4  shadow-md  mx-auto">
         <h1 className="text-xl font-semibold text-blue-950 mb-3">
           Confirming your information

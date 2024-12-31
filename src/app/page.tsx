@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import ChatArea from "@/components/chat-area";
 import ListUser from "@/components/list-user";
 import React from "react";

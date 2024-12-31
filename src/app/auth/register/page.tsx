@@ -59,7 +59,7 @@ const Register = () => {
     setLoading(false);
   }
   return (
-    <div className="grid place-items-center h-screen ">
+    <div className="grid place-items-center  ">
       <div className="grid w-full max-w-md mx-auto  shadow-sm p-6 rounded-md">
         <h1 className="text-3xl font-bold text-center mb-6">Real-time Chat</h1>
         <div className="">

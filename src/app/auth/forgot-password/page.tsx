@@ -45,7 +45,7 @@ const ForgotPasswordPage = () => {
     form.reset();
   }
   return (
-    <div className="grid place-items-center h-screen ">
+    <div className="grid place-items-center">
       <div className="mx-auto grid w-full max-w-md shadow-lg p-8 rounded-lg">
         <h1 className="text-3xl font-bold mb-4 text-center">Forgot password</h1>
 

@@ -18,6 +18,7 @@ import { loginUser } from "@/action/actions";
 import { Loader2 } from "lucide-react";
 import FormError from "@/components/form-error";
 import FormSuccess from "@/components/form-success";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const loginSchema = z.object({
@@ -28,6 +29,7 @@ const Login = () => {
       message: "password must be at least 5 characters.",
     }),
   });
+  const router = useRouter();
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [loading, setLoading] = useState(false);
@@ -45,14 +47,14 @@ const Login = () => {
     setLoading(true);
     const response = await loginUser(values);
     if (response.success) {
-      window.location.href = "/";
+      router.push("/");
     }
     setError(response.error);
     setSuccess(response.success);
     setLoading(false);
   }
   return (
-    <div className="grid place-items-center h-screen">
+    <div className="grid ">
       <div className="grid w-full max-w-md mx-auto  shadow-md p-6 rounded-md">
         <h1 className="text-3xl font-bold text-center mb-6">Real-time Chat</h1>
         <div className="">

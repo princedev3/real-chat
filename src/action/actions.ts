@@ -1,7 +1,7 @@
 "use server";
 import prisma from "@/prisma/Prismadb";
 import { getUserByEmail } from "./user-action";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { generatePasswordResetToken, generateVerificationToken } from "./token";
 import { sendVerificationEmail } from "@/lib/mail";
 import * as z from "zod";

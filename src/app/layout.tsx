@@ -20,13 +20,14 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await auth();
-
   return (
     <html lang="en">
       <body className={`${inter.className}  `}>
         <QueryProvider>
           <SessionProvider session={session}>
-            <Header />
+            <div className="mb-4">
+              <Header />
+            </div>
             {children}
             <Toaster />
           </SessionProvider>
