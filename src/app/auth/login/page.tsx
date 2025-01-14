@@ -46,6 +46,7 @@ const Login = () => {
     setSuccess("");
     setLoading(true);
     const response = await loginUser(values);
+    console.log(response);
     if (response.success) {
       router.push("/");
     }
