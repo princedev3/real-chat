@@ -86,7 +86,7 @@ export async function createUser({
         },
       });
       const verificationToken = await generateVerificationToken(email);
-      sendVerificationEmail(email, verificationToken);
+      await sendVerificationEmail(email, verificationToken);
       return { success: "user created check your email for verification" };
     }
     const newUser = await prisma.user.create({
